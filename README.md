@@ -1,12 +1,93 @@
-# React + Vite
+# 🧠 React під контролем: Від стану до запитів
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Навчальний проєкт, присвячений роботі з формами та асинхронними запитами у React. Зосереджено увагу на ефективному використанні **контрольованих** та **неконтрольованих** компонентів, а також обробці **запитів до API** з урахуванням завантаження та помилок.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
 
-## Expanding the ESLint configuration
+👉 Доступна демо-версія: [https://react-controlled.vercel.app](https://react-controlled.vercel.app)  
+👉 Репозиторій на GitHub: [github.com/yourusername/react-controlled](https://github.com/yourusername/react-controlled)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📦 Стек технологій
+
+- **React** з TypeScript
+- **Hooks**: useState, useRef, useEffect
+- **Vercel** для деплою
+
+---
+
+## 🧩 Основні компоненти
+
+### 🔹 ControlledForm
+
+- Побудований на основі **контрольованих компонентів**
+- Використання `useState` для керування станом форми
+- Динамічна валідація та реагування на зміни введення в реальному часі
+
+### 🔹 UncontrolledForm
+
+- Неконтрольована реалізація за допомогою `useRef`
+- Доступ до значень полів форми без повторних ререндерів
+- Підходить для простих форм із мінімальною логікою
+
+---
+
+## 🔄 Робота з асинхронними запитами
+
+- Запит даних виконується через `fetch`
+- Вся логіка розміщена в `useEffect` з підтримкою `async/await`
+- Реалізовано:
+  - Стан завантаження (`isLoading`)
+  - Стан помилки (`error`)
+  - Затримка перед відповіддю (`setTimeout` для симуляції очікування)
+  - Вивід даних у форматованому вигляді (без `JSON.stringify`)
+
+---
+
+## 🎨 UI Особливості
+
+- Повідомлення про завантаження зі стилем: **синій жирний текст**
+- Код написаний з урахуванням зрозумілих назв компонентів — це полегшує навігацію для інших розробників
+
+---
+
+## 📚 Мета проєкту
+
+✅ Показати різницю між контрольованими та неконтрольованими підходами  
+✅ Вчити обробляти асинхронні запити з урахуванням UX  
+✅ Демонструвати чисту типізацію та читабельний код
+
+---
+
+## Структура проекту
+
+```
+hw3-react-app/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── components/
+│   │   ├── ControlledForm.tsx
+│   │   ├── UncontrolledForm.tsx
+│   │   └── Loader.tsx
+│   ├── utils/
+│   │   └── api.js
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+
+## 📌 Запуск локально
+
+```bash
+git clone https://github.com/yourusername/react-controlled.git
+cd react-controlled
+npm install
+npm start
+
