@@ -1,42 +1,74 @@
 #root {
-  max-width: 1280px;
+  /* height: 100%; */
+  width: 90%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: lightgreen;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.form-container__input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.card {
-  padding: 2em;
+.form-container__input label {
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 
-.read-the-docs {
-  color: #888;
+.form-container__input input,
+.form-container__input textarea {
+  padding: 8px 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  width: 100%;              /* Додаємо ширину для однаковості */
+  box-sizing: border-box;   /* Щоб padding не збільшував ширину */
+}
+
+.form-container__input textarea {
+  min-height: 72px;         /* Вдвічі більше стандартного input */
+  resize: vertical;         /* Дозволяємо змінювати висоту вручну */
+  line-height: 1.5;
+}
+
+.form-container__input input:focus,
+.form-container__input textarea:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+.form-container__submit {
+  padding: 10px 24px;
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  margin-top: 12px;
+}
+
+.form-container__submit:hover,
+.form-container__submit:focus {
+  background-color: #1565c0;
+  outline: none;
 }

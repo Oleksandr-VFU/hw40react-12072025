@@ -1,7 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-const ControlledInput = () => {
+interface ControlledInputProps {
+    reset: boolean
+}
+
+const ControlledInput: React.FC<ControlledInputProps> = ({ reset }) => {
     const [value, setValue] = useState('')
+
+    useEffect(() => {setValue('')}, [reset])
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         e.preventDefault()
         const input = e.target.value
@@ -12,9 +19,9 @@ const ControlledInput = () => {
         }
     }
   return (
-    <div>
+    <div className='form-container__input'>
         <label htmlFor='phone-number'>Введіть номер телефону:</label>
-        <input id='phone-number' type='text' value={value} onChange={handleChange} required></input>
+        <input id='phone-number' value={value} onChange={handleChange} required></input>
     </div>
   )
 }
