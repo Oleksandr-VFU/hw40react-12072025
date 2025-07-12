@@ -6,8 +6,8 @@
 
 ## 🔗 Live Demo
 
-👉 Доступна демо-версія: [https://react-controlled.vercel.app](https://react-controlled.vercel.app)  
-👉 Репозиторій на GitHub: [github.com/yourusername/react-controlled](https://github.com/yourusername/react-controlled)
+👉 Доступна демо-версія: [https://hw40react-12072025.vercel.app/](https://hw40react-12072025.vercel.app/)  
+👉 Репозиторій на GitHub: [https://github.com/Oleksandr-VFU/hw40react-12072025.git](https://github.com/Oleksandr-VFU/hw40react-12072025.git)
 
 ---
 
